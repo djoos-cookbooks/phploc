@@ -1,7 +1,7 @@
 Description
 ===========
 
-This cookbook provides an easy way to install phploc.
+This cookbook provides an easy way to install phploc, PHP Lines Of Code.
 
 More information?
 https://github.com/sebastianbergmann/phploc
