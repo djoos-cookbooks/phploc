@@ -27,7 +27,7 @@ Requirements
 Attributes
 ==========
 
-* `node['phploc']['install_method']` - Installation method, "pear" or "composer", defaults to "pear"
+* `node['phploc']['install_method']` - Installation method, "pear", "composer" or "phar", defaults to "pear"
 * `node['phploc']['version']` - The phploc version that will be installed, defaults to "latest"
 * `node['phploc']['prefix']` - The composer.json bin-dir, defaults to "/usr/bin" (composer install method only)
 
