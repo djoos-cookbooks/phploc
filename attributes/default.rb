@@ -10,3 +10,7 @@ default[:phploc][:version] = "latest"
 
 #composer install only
 default[:phploc][:prefix] = "/usr/bin"
+
+#phar install only
+default[:phploc][:phar_url] = "http://pear.phpunit.de/get/phploc.phar"
+default[:phploc][:install_dir] = ""
