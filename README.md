@@ -36,9 +36,9 @@ Usage
 
 1) include `recipe[phploc]` in a run list
 2)
-	change the attributes
-	--- OR ---
-	override the attribute on a higher level (http://wiki.opscode.com/display/chef/Attributes#Attributes-AttributesPrecedence)
+    change the attributes
+    --- OR ---
+    override the attribute on a higher level (http://wiki.opscode.com/display/chef/Attributes#Attributes-AttributesPrecedence)
 
 References
 ==========
