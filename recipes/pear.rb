@@ -44,5 +44,5 @@ php_pear "phploc" do
     if node[:phploc][:version] != "latest"
         version "#{node[:phploc][:version]}"
     end
-    action :upgrade
+    action :upgrade if node[:phploc][:version] == "latest"
 end
