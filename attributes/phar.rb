@@ -5,5 +5,5 @@
 # Copyright 2013-2014, Escape Studios
 #
 
-default[:phploc][:phar_url] = "http://pear.phpunit.de/get/phploc.phar"
-default[:phploc][:install_dir] = ""
+default['phploc']['phar_url'] = "http://pear.phpunit.de/get/phploc.phar"
+default['phploc']['install_dir'] = ""

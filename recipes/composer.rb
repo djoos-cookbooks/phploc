@@ -7,9 +7,9 @@
 
 include_recipe "composer"
 
-phploc_dir = "#{Chef::Config[:file_cache_path]}/phploc"
+phploc_dir = "#{Chef::Config['file_cache_path']}/phploc"
 
-directory "#{phploc_dir}" do
+directory phploc_dir do
     owner "root"
     group "root"
     mode "0755"
@@ -17,8 +17,8 @@ directory "#{phploc_dir}" do
 end
 
 #figure out what version to install
-if node[:phploc][:version] != "latest"
-    version = node[:phploc][:version]
+if node['phploc']['version'] != "latest"
+    version = node['phploc']['version']
 else
     version = "*.*.*"
 end
@@ -31,7 +31,7 @@ template "#{phploc_dir}/composer.json" do
     mode 0600
     variables(
         :version => version,
-        :bindir => node[:phploc][:prefix]
+        :bindir => node['phploc']['prefix']
     )
 end
 

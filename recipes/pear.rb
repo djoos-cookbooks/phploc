@@ -18,19 +18,11 @@ php_pear "PEAR" do
     action :upgrade
 end
 
-#eZ Enterprise components PEAR channel
-php_pear_channel "components.ez.no" do
-    action :discover
-end
-
-#Netpirates PEAR channel
-php_pear_channel "pear.netpirates.net" do
-    action :discover
-end
-
-#Symfony2 PEAR channel
-php_pear_channel "pear.symfony.com" do
-    action :discover
+#eZ Enterprise components, Netpirates & Symfony2 PEAR channels
+%w{components.ez.no pear.netpirates.net pear.symfony.com}.each do |chnl|
+    php_pear_channel chnl do
+        action :discover
+    end
 end
 
 #PHPUnit PEAR channel
@@ -41,8 +33,8 @@ end
 #upgrade phploc
 php_pear "phploc" do
     channel pearhub_chan.channel_name
-    if node[:phploc][:version] != "latest"
-        version "#{node[:phploc][:version]}"
+    if node['phploc']['version'] != "latest"
+        version node['phploc']['version']
     end
-    action :upgrade if node[:phploc][:version] == "latest"
+    action :upgrade if node['phploc']['version'] == "latest"
 end

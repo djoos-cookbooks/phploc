@@ -5,7 +5,7 @@
 # Copyright 2013-2014, Escape Studios
 #
 
-case node[:phploc][:install_method]
+case node['phploc']['install_method']
     when "pear"
         include_recipe "phploc::pear"
     when "composer"
