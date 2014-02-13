@@ -2,7 +2,7 @@
 # Cookbook Name:: phploc
 # Recipe:: phar
 #
-# Copyright 2013, Escape Studios
+# Copyright 2013-2014, Escape Studios
 #
 
 if node[:phploc][:install_dir] != ""
