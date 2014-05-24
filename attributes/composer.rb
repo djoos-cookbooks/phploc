@@ -5,4 +5,4 @@
 # Copyright 2013-2014, Escape Studios
 #
 
-default['phploc']['prefix'] = "/usr/bin"
+default['phploc']['prefix'] = '/usr/bin'
