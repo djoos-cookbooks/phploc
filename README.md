@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/escapestudios-cookbooks/phploc.png)](http://travis-ci.org/escapestudios-cookbooks/phploc)
+
 Description
 ===========
 
