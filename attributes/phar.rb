@@ -2,8 +2,8 @@
 # Cookbook Name:: phploc
 # Attributes:: phar
 #
-# Copyright 2013-2014, Escape Studios
+# Copyright 2013-2015, Escape Studios
 #
 
-default['phploc']['phar_url'] = 'http://pear.phpunit.de/get/phploc.phar'
+default['phploc']['phar_url'] = 'https://phar.phpunit.de/phpunit.phar'
 default['phploc']['install_dir'] = '/usr/bin'

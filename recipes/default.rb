@@ -2,12 +2,10 @@
 # Cookbook Name:: phploc
 # Recipe:: default
 #
-# Copyright 2013-2014, Escape Studios
+# Copyright 2013-2015, Escape Studios
 #
 
 case node['phploc']['install_method']
-when 'pear'
-  include_recipe 'phploc::pear'
 when 'composer'
   include_recipe 'phploc::composer'
 when 'phar'

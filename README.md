@@ -29,7 +29,7 @@ Requirements
 Attributes
 ==========
 
-* `node['phploc']['install_method']` - Installation method, "pear", "composer" or "phar", defaults to "pear"
+* `node['phploc']['install_method']` - Installation method, "composer" or "phar", defaults to "composer"
 * `node['phploc']['version']` - The phploc version that will be installed, defaults to "latest"
 * `node['phploc']['prefix']` - The composer.json bin-dir, defaults to "/usr/bin" (composer install method only)
 
@@ -52,7 +52,7 @@ License and Authors
 
 Author: David Joos <david.joos@escapestudios.com>
 Author: Escape Studios Development <dev@escapestudios.com>
-Copyright: 2013-2014, Escape Studios
+Copyright: 2013-2015, Escape Studios
 
 Unless otherwise noted, all files are released under the MIT license,
 possible exceptions will contain licensing information in them.
