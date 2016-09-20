@@ -1,14 +1,17 @@
 name 'phploc'
-maintainer 'Escape Studios'
-maintainer_email 'dev@escapestudios.com'
+maintainer 'David Joos'
+maintainer_email 'development@davidjoos.com'
 license 'MIT'
 description 'Installs/Configures phploc'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '2.0.1'
 
-%w( debian ubuntu redhat centos fedora scientific amazon ).each do |os|
+%w(debian ubuntu redhat centos fedora scientific amazon).each do |os|
   supports os
 end
+
+source_url 'https://github.com/djoos-cookbooks/phploc' if respond_to?(:source_url)
+issues_url 'https://github.com/djoos-cookbooks/phploc/issues' if respond_to?(:issues_url)
 
 depends 'php'
 depends 'composer'

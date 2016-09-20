@@ -2,7 +2,7 @@
 # Cookbook Name:: phploc
 # Attributes:: phar
 #
-# Copyright 2013-2015, Escape Studios
+# Copyright (c) 2016, David Joos
 #
 
 default['phploc']['phar_url'] = 'https://phar.phpunit.de/phploc.phar'
