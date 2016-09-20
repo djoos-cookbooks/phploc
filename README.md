@@ -1,22 +1,22 @@
-[![Build Status](https://secure.travis-ci.org/escapestudios-cookbooks/phploc.png)](http://travis-ci.org/escapestudios-cookbooks/phploc)
+[![Build Status](https://travis-ci.org/djoos-cookbooks/phploc.png)](http://travis-ci.org/djoos-cookbooks/phploc)
 
-Description
-===========
+# phploc cookbook
+
+## Description
 
 This cookbook provides an easy way to install phploc, PHP Lines Of Code.
 
 More information?
 https://github.com/sebastianbergmann/phploc
 
-Requirements
-============
+## Requirements
 
-## Cookbooks:
+### Cookbooks:
 
 * php
 * composer
 
-## Platforms:
+### Platforms:
 
 * Ubuntu
 * Debian
@@ -26,29 +26,27 @@ Requirements
 * Scientific
 * Amazon
 
-Attributes
-==========
+## Attributes
 
 * `node['phploc']['install_method']` - Installation method, "composer" or "phar", defaults to "composer"
 * `node['phploc']['version']` - The phploc version that will be installed, defaults to "latest"
 * `node['phploc']['prefix']` - The composer.json bin-dir, defaults to "/usr/bin" (composer install method only)
 
-Usage
-=====
+## Usage
 
 1) include `recipe[phploc]` in a run list
-2)
-    change the attributes
-    --- OR ---
-    override the attribute on a higher level (http://wiki.opscode.com/display/chef/Attributes#Attributes-AttributesPrecedence)
+2) change the attributes
+--- OR ---
+[override the attribute on a higher level](http://wiki.opscode.com/display/chef/Attributes#Attributes-AttributesPrecedence)
 
-References
-==========
+## References
 
 * [phploc GitHub repository] (https://github.com/sebastianbergmann/phploc)
 
-License and Authors
-===================
+## License and Authors
+
+Author: David Joos <development@davidjoos.com>
+Copyright: 2016, David Joos
 
 Author: David Joos <david.joos@escapestudios.com>
 Author: Escape Studios Development <dev@escapestudios.com>

@@ -2,7 +2,7 @@
 # Cookbook Name:: phploc
 # Recipe:: composer
 #
-# Copyright 2013-2015, Escape Studios
+# Copyright (c) 2016, David Joos
 #
 
 include_recipe 'composer'
@@ -17,11 +17,11 @@ directory phploc_dir do
 end
 
 # figure out what version to install
-if node['phploc']['version'] != 'latest'
-  version = node['phploc']['version']
-else
-  version = '*.*.*'
-end
+version = if node['phploc']['version'] != 'latest'
+            node['phploc']['version']
+          else
+            '*.*.*'
+          end
 
 # composer.json
 template "#{phploc_dir}/composer.json" do
