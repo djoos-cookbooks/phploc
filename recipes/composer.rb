@@ -10,8 +10,8 @@ include_recipe 'composer'
 install_dir = node['phploc']['install_dir']
 
 # figure out what version to install
-version = if node['phpcs']['version'] != 'latest'
-            node['phpcs']['version']
+version = if node['phploc']['version'] != 'latest'
+            node['phploc']['version']
           else
             '*.*.*'
           end
