@@ -16,7 +16,7 @@ version = if node['phpcs']['version'] != 'latest'
             '*.*.*'
           end
 
-composer_install_global 'squizlabs/php_codesniffer' do
+composer_install_global 'phploc/phploc' do
   install_dir install_dir
   version version
   bin_dir node['phploc']['prefix']
