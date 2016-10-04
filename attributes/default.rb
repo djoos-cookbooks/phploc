@@ -7,4 +7,4 @@
 
 default['phploc']['install_method'] = 'composer'
 default['phploc']['version'] = 'latest'
-default['phploc']['bin_dir'] = '/usr/bin'
+default['phploc']['bin_dir'] = default['composer']['global_install']['bin_dir']

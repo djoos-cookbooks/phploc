@@ -7,38 +7,17 @@
 
 include_recipe 'composer'
 
-phploc_dir = node['phploc']['install_dir']
-
-directory phploc_dir do
-  owner 'root'
-  group 'root'
-  mode 0755
-  action :create
-end
+install_dir = node['phploc']['install_dir']
 
 # figure out what version to install
-version = if node['phploc']['version'] != 'latest'
-            node['phploc']['version']
+version = if node['phpcs']['version'] != 'latest'
+            node['phpcs']['version']
           else
             '*.*.*'
           end
 
-# composer.json
-template "#{phploc_dir}/composer.json" do
-  source 'composer.json.erb'
-  owner 'root'
-  group 'root'
-  mode 0600
-  variables(
-    :version => version,
-    :bindir => node['phploc']['bin_dir']
-  )
-end
-
-# composer update
-execute 'phploc-composer' do
-  user 'root'
-  cwd phploc_dir
-  command 'composer update'
-  action :run
+composer_install_global 'squizlabs/php_codesniffer' do
+  install_dir install_dir
+  version version
+  bin_dir node['phploc']['prefix']
 end

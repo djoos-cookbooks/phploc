@@ -5,4 +5,4 @@
 # Copyright (c) 2016, David Joos
 #
 
-default['phploc']['install_dir'] = '/usr/local/phploc'
+default['phploc']['install_dir'] = default['composer']['global_install']['install_dir']
