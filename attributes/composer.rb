@@ -5,4 +5,4 @@
 # Copyright (c) 2016, David Joos
 #
 
-default['phploc']['prefix'] = '/usr/bin'
+default['phploc']['install_dir'] = '/usr/local/phploc'

@@ -7,7 +7,7 @@
 
 include_recipe 'composer'
 
-phploc_dir = "#{Chef::Config[:file_cache_path]}/phploc"
+phploc_dir = node['phploc']['install_dir']
 
 directory phploc_dir do
   owner 'root'
@@ -31,7 +31,7 @@ template "#{phploc_dir}/composer.json" do
   mode 0600
   variables(
     :version => version,
-    :bindir => node['phploc']['prefix']
+    :bindir => node['phploc']['bin_dir']
   )
 end
 
