@@ -3,7 +3,7 @@ maintainer 'David Joos'
 maintainer_email 'development@davidjoos.com'
 license 'MIT'
 description 'Installs/Configures phploc'
-version '2.1.0'
+version '2.1.1'
 
 %w(debian ubuntu redhat centos fedora scientific amazon).each do |os|
   supports os
