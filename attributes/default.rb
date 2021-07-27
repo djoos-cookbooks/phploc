@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: phploc
+# Cookbook:: phploc
 # Attributes:: default
 #
-# Copyright (c) 2016, David Joos
+# Copyright:: (c) 2016, David Joos
 #
 
 default['phploc']['install_method'] = 'composer'

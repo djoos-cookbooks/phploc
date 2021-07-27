@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: phploc
+# Cookbook:: phploc
 # Recipe:: default
 #
-# Copyright (c) 2016, David Joos
+# Copyright:: (c) 2016, David Joos
 #
 
 case node['phploc']['install_method']
